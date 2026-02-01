@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sohan ❤️ Krittika</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #ffe0eb;
+            overflow: hidden;
+            margin: 0;
+            position: relative;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: #d60000;
+            margin-top: 40px;
+            animation: pop 1s ease-in-out infinite alternate;
+        }
+
+        @keyframes pop {
+            from { transform: scale(1); }
+            to { transform: scale(1.07); }
+        }
+
+        .buttons {
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 15px 35px;
+            font-size: 1.4rem;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        #yesBtn {
+            background-color: #ff1493;
+            color: white;
+            z-index: 10;
+            position: relative;
+        }
+
+        #noBtn {
+            background-color: white;
+            color: red;
+            position: absolute;
+            z-index: 10;
+        }
+
+        /* floating hearts */
+        .heart {
+            position: fixed;
+            bottom: -10px;
+            color: red;
+            font-size: 25px;
+            animation: floatUp 6s linear infinite;
+        }
+
+        @keyframes floatUp {
+            0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(-120vh) rotate(360deg); opacity: 0; }
+        }
+
+        /* soft sparkles */
+        .sparkle {
+            position: fixed;
+            width: 6px;
+            height: 6px;
+            background: rgba(255,255,255,0.9);
+            border-radius: 50%;
+            box-shadow: 0 0 8px white;
+            animation: sparkleMove 5s linear infinite;
+        }
+
+        @keyframes sparkleMove {
+            0% { transform: translateY(0) scale(1); opacity: 1; }
+            100% { transform: translateY(-100vh) scale(1.5); opacity: 0; }
+        }
+
+        .final-message {
+            font-size: 3rem;
+            color: #d60000;
+            margin-top: 30vh;
+            animation: pop 1s ease-in-out infinite alternate;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Romantic music -->
+<audio autoplay loop>
+    <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_7a67e55ce3.mp3?filename=romantic-112557.mp3">
+</audio>
+
+<h1>Krittika ❤️ Will you be my Valentine?</h1>
+
+<div class="buttons">
+    <button id="yesBtn" onclick="yesClicked()">Yes</button>
+    <button id="noBtn">No</button>
+</div>
+
+<script>
+    const noBtn = document.getElementById("noBtn");
+    const yesBtn = document.getElementById("yesBtn");
+
+    // No button runs away
+    noBtn.addEventListener("mouseover", () => {
+        const x = Math.random() * (window.innerWidth - 100);
+        const y = Math.random() * (window.innerHeight - 100);
+        noBtn.style.left = x + "px";
+        noBtn.style.top = y + "px";
+
+        // Yes button grows
+        let s = p
