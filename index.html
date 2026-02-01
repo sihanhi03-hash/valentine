@@ -167,4 +167,39 @@ So I have something special to ask you:</h2>
         const sparkle = document.createElement("div");
         sparkle.classList.add("sparkle");
         sparkle.innerHTML = "✦";
-        sparkle.s
+        sparkle.style.left = Math.random() * 100 + "vw";
+        sparkle.style.animationDuration = (2 + Math.random() * 2) + "s";
+
+        document.body.appendChild(sparkle);
+        setTimeout(() => sparkle.remove(), 4000);
+    }
+    setInterval(createSparkle, 200);
+
+    // Fireworks
+    function createFirework() {
+        const firework = document.createElement("div");
+        firework.classList.add("firework");
+
+        firework.style.left = Math.random() * 100 + "vw";
+        firework.style.top = Math.random() * 100 + "vh";
+
+        firework.style.background = `hsl(${Math.random()*360}, 100%, 60%)`;
+
+        document.body.appendChild(firework);
+        setTimeout(() => firework.remove(), 1200);
+    }
+    setInterval(createFirework, 600);
+
+    // Yes button action
+    function yesClicked() {
+        document.body.innerHTML = `
+            <h1 style="font-size:3rem; margin-top:40vh; color:#b30000;">
+                Yayy Krittika!!! ❤️💘<br><br>
+                You just made my whole universe sparkle! ✨🎆💛
+            </h1>
+        `;
+    }
+</script>
+
+</body>
+</html>
